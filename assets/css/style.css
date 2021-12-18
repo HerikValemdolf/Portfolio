@@ -5,7 +5,7 @@
     font-family: 'Baloo 2', sans-serif;
 }
 body{
-    background-image: linear-gradient(to right,#003D8B,#07365E);
+    background-image: linear-gradient(to right,#0030f2cb,#07365E);
 }
 
                                 /*Conf Header*/
@@ -69,6 +69,82 @@ section{
     height: 91vh;
     display: flex;
     justify-content: center;
-    background-color: red;
 }       
+.desc-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.text-left p{
+    color: #ffffff;
+    font-size: 35px;
+}
+.btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,#ebf30679,#ebf306d0);
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    border-radius: 2px;
+    }
+.btn-submit a{
+    text-decoration: none;
+}
+.btn-submit p{
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold
+}
+.btn-submit:hover{
+    background-color: #c4c4c42c;
+    background-image: none;
+}
 
+.desc-right{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    background-color: #e6ee0ae3;
+    border-radius: 3px 3px 3px 130px;
+    box-shadow: 40px -40px 5px #e6ee0ac9;
+}
+.container-left{
+    width: 380px;
+    height: 304px;
+    position: relative;
+}
+.container-left img{
+    width: 400px;
+    position: absolute;
+    top: -30px;
+}
+.right{
+    display: flex;
+    width: 20px;
+    height: 250px;
+    padding: 4px;
+    writing-mode: vertical-lr;
+}
+.right a{
+    display: block;
+    font-size: 16px;
+    margin: 10px;
+    color: #ffffff;
+    transform: rotate(180deg);
+    text-decoration: none;
+}
+.circle{
+    display: flex;
+    width: 7px;
+    height: 7px;
+    background-color: #e6ee0ae3;
+    border-radius: 50%;
+}
