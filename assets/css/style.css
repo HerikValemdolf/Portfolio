@@ -12,11 +12,11 @@ html{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-    width: 20px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track{
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.611);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.07);
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
@@ -30,7 +30,6 @@ header{
     display: flex;
     justify-content: center;
     height: 70px;
-    
     /*background-color: red;*/
 }
 .container{
@@ -39,6 +38,7 @@ header{
     width: 1150px;
 }
 .line{
+    /*width: 100%;*/
     border-bottom: 1px solid #EAF306;
 }
 .logo{
@@ -47,7 +47,7 @@ header{
 }
 .logo a{
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 2rem;
     text-decoration: none;
 }
 .menu{
@@ -68,7 +68,7 @@ nav a{
     display: block;
     text-decoration: none;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 1rem;
     padding: 10px;
     text-transform: uppercase;
 }
@@ -77,7 +77,9 @@ nav a:hover{
     background-color: #c4c4c42c;
     color: #EAF306;
 }
-
+.menu-opener{
+    display: none;
+}
 
                 /*SECTION BG*/
 
@@ -91,16 +93,17 @@ nav a:hover{
     flex-direction: column;
     justify-content: center;
     flex: 1;
+   
 }
 .text-left p{
     color: #ffffff;
-    font-size: 35px;
+    font-size: 2.5rem;
 }
 .btn-submit{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right,#ebf30679,#ebf306d0);
+    background-image: linear-gradient(to right,#ebf3064b,#ebf30693);
     margin-top: 30px;
     width: 100px;
     height: 35px;
@@ -113,9 +116,10 @@ nav a:hover{
     display: block;
     padding: 10px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold
 }
+
 .btn-submit:hover{
     background-color: #c4c4c42c;
     background-image: none;
@@ -126,6 +130,7 @@ nav a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .left{
     background-color: #e6ee0ae3;
@@ -140,7 +145,7 @@ nav a:hover{
 .container-left img{
     width: 400px;
     position: absolute;
-    top: -30px;
+    top: -40px;
 }
 .right{
     display: flex;
@@ -164,6 +169,7 @@ nav a:hover{
     background-color: #e6ee0ae3;
     border-radius: 50%;
 }
+
 
 
                     /*SECTION SOBRE*/
@@ -198,6 +204,7 @@ nav a:hover{
         margin: 100px 0px 100px 100px;
         padding: 50px 0px 50px 50px;
         text-align: start;
+       
     }
     .desc-sobre h1{
         color: white;
@@ -221,15 +228,20 @@ nav a:hover{
         margin-top:20px;
     }
 
+    @media (min-width:1170px) {
+        
+        .foto {
+            margin: auto;
+        }
+    }
+
 
                 /*SECTION SKILLS*/
     
     #skills{
-            /*height: 500px;*/
             display: flex;
             justify-content: center;
             align-items: center;
-            /*margin-top: 200px;*/
             height: 100vh;
     }
     .skills-text{
@@ -281,8 +293,9 @@ nav a:hover{
     .cards-sup div:hover
     {
         border:  1px solid #EAF306;
-        
-    }
+     }
+    
+    
     
     .cards-inf{
         display: flex;
@@ -460,10 +473,10 @@ form input, form textarea{
     resize: none;
 }
 form input:focus, form textarea:focus{
-    background-color: #ebf706;
+    background-color: #f7f7f5;
 }
 #testeid{
-    background-image: linear-gradient(to right,#ebf30679,#ebf306d0);
+    background-image: linear-gradient(to right,#ebf30674,#ebf306);
     color: white;
     font-size: 16px;
     width: 150px;
@@ -489,6 +502,7 @@ form input:focus, form textarea:focus{
     width: 100%;
 }
 #footer div{
+   /*width: 100%;*/
     border-top: 1px solid #EAF306;
 }
 #footer p{
@@ -498,4 +512,372 @@ form input:focus, form textarea:focus{
     width: 100%;
     color: white;
     
+}
+
+#footer{
+    display: grid;
+    grid-column-gap: 10px;
+}
+
+
+
+
+                /*RESPONSIVIDADE*/
+
+@media (min-width:450px) and (max-width:800px){
+
+                /*HEADER*/
+
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 30px;
+        margin-right: 30px;
+    }
+    .menu nav{
+        display: none;
+        position: absolute;
+        z-index: 98;
+        background-color: rgba(0, 0, 4, 0.95);
+        width: 50vw;
+        height: calc(100vh - 100px);
+        top: 72px;
+        right: 0;
+    }
+    .menu ul{
+        flex-direction: column;
+        /*
+        justify-content: center;
+        align-items: center;*/
+    }
+    .menu li a{
+        font-weight: lighter;
+        height: 80px;
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 40px;
+        border: 0;
+    }
+
+                /*BG*/
+                
+    .desc-left{
+        align-items: center;
+    }
+    .desc-right{
+        display: none;
+    }
+
+                /*SOBRE*/
+
+
+     #sobre .container{
+        flex-direction: column-reverse;
+    }
+    .foto {
+        width: 350px;
+        height: 350px;
+        margin: auto;
+        margin-top: 80px;
+    }
+    .desc-sobre{
+       padding: 0;
+       margin: 0;
+    }
+    .desc-sobre h1{
+        margin: auto;
+    }
+    .desc-sobre h3{
+        font-size: 18px;
+        margin: 30px;
+    }
+
+                /*SKILLS*/
+
+
+    #skills .container {
+        flex-direction: column;
+    }
+    .skills-text{
+        width: 100%;
+    }
+    .text-titulo h1{
+       margin: auto;
+    }
+    .text-desc h2{
+        width: auto;
+        margin: 30px;
+        text-align: justify;
+    }
+
+    .skills-cards{
+        width: 100%;
+    }
+
+
+                /*PROJETOS*/
+
+    #projetos .projetos-sup{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .projetos-sup a div{
+        margin: 25px 0 25px 0;
+    }
+
+    #projetos .projetos-inf{
+        flex-direction: column;
+        align-items: center;
+    }
+    .projetos-inf a div {
+        margin: 25px 0 25px 0;
+    }
+
+
+              /*CONTATO*/
+
+    #contato .contato-inf{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-left img{
+        display: none;
+    }
+
+                 /*FOOTER*/
+
+    #footer {
+        width: 100%;
+        margin-top: 200px;
+        }
+    
+        #footer .container p{
+         width: 100%;
+         font-size: 18px;
+        text-align: center;
+        }
+        .lineline{
+            display: none;
+        }
+
+    
+
+}
+
+            /*RESPONSIVIDADE MOBILE*/
+
+
+ @media (max-width:450px){
+
+
+                /*HEADER*/
+
+    .logo{
+        margin-left: 30px;
+    }
+    .logo a{
+        font-size: 1.4rem;
+    }
+    .menu-opener{
+        display: block;
+        width: 30px;
+        margin-right: 30px;
+    }
+    .menu nav{
+        display: none;
+        position: absolute;
+        z-index: 98;
+        background-color: rgba(0, 0, 4, 0.95);
+        width: 100vw;
+        height: calc(100vh - 100px);
+        top: 72px;
+        right: 0;
+    }
+    
+    .menu ul{
+        flex-direction: column;
+        /*
+        justify-content: center;
+        align-items: center;*/
+    }
+    .menu li a{
+        font-weight: lighter;
+        height: 60px;
+        font-size: 14px;
+        padding: 0;
+        margin: 30px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+    }
+
+                /*BG*/
+                
+    .desc-left{
+        align-items: center;
+        
+    }
+    .text-left p{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .desc-right{
+        display: none;
+    }
+
+                /*SOBRE*/
+
+
+     #sobre .container{
+        flex-direction: column-reverse;
+    }
+    .foto {
+        width: 70%;
+        height: 250px;
+        margin: auto;
+        margin-top: 80px;
+    }
+    .desc-sobre{
+       padding: 0;
+       margin: 0;
+    }
+    .desc-sobre h1{
+        margin: auto;
+    }
+    .desc-sobre h3{
+        font-size: 12px;
+        margin: 30px;
+        text-align: justify;
+    }
+
+    .foto img{
+        height: 250px;
+        margin-bottom: 30px;
+    }
+                /*SKILLS*/
+
+
+    #skills .container {
+        flex-direction: column;
+    }
+    .skills-text{
+        width: 100%;
+    }
+    .text-titulo h1{
+       margin: auto;
+       text-align: center;
+    }
+    .text-desc{
+    margin: auto;
+    width: 100%;
+    display: none;
+    }
+    .text-desc h2{
+        text-align: center;
+        /*padding: 30px;*/
+        
+    }
+    .skills-cards{
+        width: 100%;
+        align-items: center;
+
+    }
+    .cards-sup{
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .cards-sup a div{
+        margin-bottom: 20px;
+    }
+    .cards-inf{
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .cards-inf a div{
+        margin-top: 20px;
+    }
+
+
+                /*PROJETOS*/
+
+    #projetos .container{
+        margin-top: 300px;
+    }
+    #projetos .projetos-sup{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .projetos-sup a{
+        width: 80%;
+    }
+    .projetos-sup a div{
+        margin: 25px 0 25px 0;
+        width: 100%;
+    }
+
+    #projetos .projetos-inf{
+        flex-direction: column;
+        align-items: center;
+    }
+    .projetos-inf a div {
+        margin: 20px 0 25px 0;
+        width: 100%;
+    }
+    .projetos-inf a{
+        width: 80%;
+    }
+
+
+              /*CONTATO*/
+
+    #contato .container{
+        margin-top: 600px;
+    }
+    #contato .contato-inf{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-left img{
+        display: none;
+    }
+    .contato-right{
+        width: 80%;
+    }
+    .dados{
+        width: 100%;
+    }
+    .dados form{
+        width: 100%;
+        margin: 5px;
+    }
+    .dados form input{
+        width: 100%;
+    }
+    .dados form textarea{
+        width: 100%;
+    }
+    
+    #footer {
+    width: 100%;
+       margin-top: 200px;
+    }
+
+    #footer .container p{
+     width: 100%;
+     font-size: 12px;
+    text-align: center;
+    }
+    .lineline{
+        display: none;
+    }
+
 }
