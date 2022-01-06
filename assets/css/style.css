@@ -741,6 +741,7 @@ form input:focus, form textarea:focus{
         height: 250px;
         margin: auto;
         margin-top: 80px;
+        margin-bottom: -200px;
     }
     .desc-sobre{
        padding: 0;
@@ -764,6 +765,7 @@ form input:focus, form textarea:focus{
 
     #skills .container {
         flex-direction: column;
+        margin-top: 200px;
     }
     .skills-text{
         width: 100%;
@@ -808,7 +810,7 @@ form input:focus, form textarea:focus{
                 /*PROJETOS*/
 
     #projetos .container{
-        margin-top: 300px;
+        margin-top: 1000px;
     }
     #projetos .projetos-sup{
         flex-direction: column;
@@ -839,7 +841,7 @@ form input:focus, form textarea:focus{
               /*CONTATO*/
 
     #contato .container{
-        margin-top: 600px;
+        margin-top: 1700px;
     }
     #contato .contato-inf{
         flex-direction: column;
@@ -868,7 +870,7 @@ form input:focus, form textarea:focus{
     
     #footer {
     width: 100%;
-       margin-top: 200px;
+    margin-top: 900px;
     }
 
     #footer .container p{
